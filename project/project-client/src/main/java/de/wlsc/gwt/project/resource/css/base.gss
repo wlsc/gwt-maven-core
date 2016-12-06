@@ -1,0 +1,19 @@
+.opacity_0 {
+	opacity: 0;
+}
+
+.opacity_25 {
+	opacity: 0.25;
+}
+
+.opacity_50 {
+	opacity: 0.5;
+}
+
+.opacity_75 {
+	opacity: 0.75;
+}
+
+.opacity_100 {
+	opacity: 1.0;
+}

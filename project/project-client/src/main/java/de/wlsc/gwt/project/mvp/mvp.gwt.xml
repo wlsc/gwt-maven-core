@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+
+	<replace-with class="de.wlsc.gwt.project.mvp.ClientFactoryImpl">
+		<when-type-is class="de.wlsc.gwt.project.mvp.ClientFactory"/>
+	</replace-with>
+
+	<inherits name="com.google.gwt.activity.Activity"/>
+	<inherits name="com.google.gwt.place.Place"/>
+	
+</module>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+  version="2.5">
+
+  <!-- Default page to serve -->
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+	
+  <context-param>
+	<param-name>gwt.xsrf.session_cookie_name</param-name>
+	<param-value>JSESSIONID</param-value>
+  </context-param>
+	
+  <!-- Servlets -->
+  <servlet>
+    <servlet-name>AppServlet</servlet-name>
+    <servlet-class>de.wlsc.gwt.project.AppServiceImpl</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>AppServlet</servlet-name>
+    <url-pattern>/app/app</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>xsrf</servlet-name>
+  	<servlet-class>com.google.gwt.user.server.rpc.XsrfTokenServiceServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+  	<servlet-name>xsrf</servlet-name>
+  	<url-pattern>/app/xsrf</url-pattern>
+  </servlet-mapping>
+
+</web-app>

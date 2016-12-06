@@ -1,0 +1,17 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	ui:generateFormat='com.google.gwt.i18n.rebind.format.PropertiesFormat'
+    ui:generateKeys="com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator"
+    ui:generateLocales="default"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	
+	<ui:with field="s"
+		type="de.wlsc.gwt.project.resource.LocaleStrings" />
+	
+	<ui:with field="css"
+		type="de.wlsc.gwt.project.resource.Resources" />
+	
+	<g:HTMLPanel>
+	    <h1 class="{css.appCss.welcomeLabel} welcomeLabelLegacy" ui:text="{s.welcome}"></h1>
+	</g:HTMLPanel>
+	
+</ui:UiBinder>

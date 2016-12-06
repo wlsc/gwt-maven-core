@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+
+	<inherits name="com.google.gwt.user.User" />
+	<inherits name="com.google.gwt.user.theme.clean.Clean" />
+	
+	<source path="" />
+	
+	<entry-point class="de.wlsc.gwt.project.App" />
+
+  	<!-- MVP -->
+	<inherits name="de.wlsc.gwt.project.mvp.mvp" />
+	
+	<!-- LOCALE -->
+	<inherits name="com.google.gwt.i18n.I18N" />
+	
+	<set-configuration-property name="locale.useragent" value="Y"/>
+	<set-configuration-property name="locale.cookie" value="language"/>
+	<set-configuration-property name="locale.searchorder" value="queryparam,cookie,useragent,meta"/>
+	
+	<!-- Enable GSS support -->
+    <set-configuration-property name="CssResource.enableGss" value="true" />
+    <set-configuration-property name="CssResource.conversionMode" value="strict" />
+	
+</module>
