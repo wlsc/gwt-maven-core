@@ -11,6 +11,7 @@ Checkout and start your next pure GWT project without a need to configure everyt
 * Activities and Places
 * Localization
 * GSS (CSS) handling
+* RPC XSRF protection
 * Packaging to WAR shared run config
 
 ### Usage (Eclipse)
