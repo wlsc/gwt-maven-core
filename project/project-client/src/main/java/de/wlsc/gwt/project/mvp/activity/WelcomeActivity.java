@@ -6,6 +6,7 @@ import com.google.gwt.place.shared.Place;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
 
 import de.wlsc.gwt.project.mvp.ClientFactory;
+import de.wlsc.gwt.project.mvp.model.WelcomeModel;
 import de.wlsc.gwt.project.mvp.place.WelcomePlace;
 import de.wlsc.gwt.project.mvp.presenter.WelcomePresenter;
 import de.wlsc.gwt.project.mvp.view.WelcomeView;
@@ -15,6 +16,8 @@ public class WelcomeActivity extends
 		WelcomePresenter {
 
 	private ClientFactory clientFactory;
+
+	private WelcomeModel welcomeModel;
 
 	private WelcomeView welcomeView;
 
@@ -30,16 +33,19 @@ public class WelcomeActivity extends
 	public void start(AcceptsOneWidget panel,
 			EventBus eventBus) {
 
+		welcomeModel = clientFactory.getWelcomeModel();
 		welcomeView = clientFactory.getWelcomeView();
 		panel.setWidget(welcomeView.asWidget());
 		bind();
 	}
 
 	public void goTo(Place place) {
+
 		clientFactory.getPlaceController().goTo(place);
 	}
 
 	public void bind() {
+
 		welcomeView.setPresenter(this);
 	}
 }
